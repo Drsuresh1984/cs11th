@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Language - Computer Science Notes</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f1e8;
+            font-family: "Comic Sans MS", "Segoe Print";
+            color: #222;
+        }
+
+        .page {
+            width: 850px;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 50px 60px;
+            background: #fffdf7;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Notebook margin line */
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 70px;
+            width: 2px;
+            height: 100%;
+            background: #e7a3a3;
+            opacity: 0.7;
+        }
+
+        .content {
+            margin-left: 25px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        h2 {
+            font-size: 23px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        p {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .definition {
+            text-align: justify;
+        }
+
+        ol {
+            font-size: 21px;
+            padding-left: 35px;
+        }
+
+        li {
+            margin: 12px 0;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                padding: 30px 25px;
+            }
+
+            .page::before {
+                left: 30px;
+            }
+
+            .content {
+                margin-left: 20px;
+            }
+
+            p, ol {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="content">
+
+            <h1><strong>Machine Language</strong></h1>
+
+            <p class="definition">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                It is a low level language. It is a sequence of instructions written
+                in the form of binary numbers consisting of 1&apos;s and 0&apos;s to which the
+                computer responds directly. Thus , Machine language is a collection
+                of binary digits or bits that the computer reads and interprets.It is
+                the only language understood by a computer directly.
+            </p>
+
+            <h2><strong>Advantages of Machine Language:</strong></h2>
+
+            <ol>
+                <li>
+                    It is directly understood by the computer.
+                </li>
+
+                <li>
+                    No translator programs, like compilers or interpreters, are needed.
+                </li>
+
+                <li>
+                    It allows the computer to run programs very quickly and efficiently.
+                </li>
+            </ol>
+
+            <h2><strong>Disadvantages of Machine Language:</strong></h2>
+
+            <ol>
+                <li>
+                    Programming in machine language is very difficult.
+                </li>
+
+                <li>
+                    The programmer must remember many complex codes to write a program.
+                </li>
+
+                <li>
+                    Finding and fixing errors (debugging) is hard.
+                </li>
+
+                <li>
+                    Writing programs in machine language takes a lot of time and is expensive.
+                </li>
+            </ol>
+
+        </div>
+    </div>
+
+</body>
+</html>

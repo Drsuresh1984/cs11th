@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepts of Computer Languages - Computer Science Notes</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f1e8;
+            font-family: "Comic Sans MS", "Segoe Print";
+            color: #222;
+        }
+
+        .page {
+            width: 850px;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 50px 60px;
+            background: #fffdf7;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Notebook margin line */
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 70px;
+            width: 2px;
+            height: 100%;
+            background: #e7a3a3;
+            opacity: 0.7;
+        }
+
+        .content {
+            margin-left: 25px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        h2 {
+            font-size: 23px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        p {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .definition {
+            text-align: justify;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        .image-text {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                padding: 30px 25px;
+            }
+
+            .page::before {
+                left: 30px;
+            }
+
+            .content {
+                margin-left: 20px;
+            }
+
+            p, .image-text {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="content">
+
+            <h1><strong>Concepts of computer Languages:</strong></h1>
+
+            <h2><strong>Computer Language:</strong></h2>
+
+            <p class="image-text">
+                image
+            </p>
+
+            <p class="definition">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                A computer language serves as a medium of communication between the user
+                and the computer system. It consists of a series of instructions written
+                in a particular format, known as coding, which directs the computer to
+                perform specific tasks. Computer languages are primarily categorized into
+                two types: Low-Level Languages (like Machine Language) and High-Level
+                Languages (like C, C++).
+            </p>
+
+            <h2><strong>Low Level Languages:</strong></h2>
+
+            <p class="definition">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                A low-level programming language communicates directly with a computer&apos;s
+                hardware. As a result, programs written in these languages are
+                machine-dependent and cannot be easily transferred between different
+                systems. These languages do not require a compiler or interpreter for
+                translation, as they are already in or close to machine code. Programs
+                developed in low-level languages are known for their high speed and
+                efficient memory usage. However, they are difficult to write, read, and
+                maintain. Low-level languages are commonly used for developing operating
+                systems, device drivers, and other applications that need direct hardware
+                interaction. They are further divided into two categories: Machine Language
+                and Assembly Language.
+            </p>
+
+            <h2><strong>High Level Languages:</strong></h2>
+
+            <p class="definition">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                High-level programming languages are machine-independent and are designed
+                to be easy to write, read, edit, and understand. To execute programs
+                written in these languages, translators such as compilers or interpreters
+                are used to convert the high-level code into machine code. Examples of
+                high-level languages include Java, Pascal, COBOL, C++, and C.
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Level Languages - Computer Science Notes</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f1e8;
+            font-family: "Comic Sans MS", "Segoe Print";
+            color: #222;
+        }
+
+        .page {
+            width: 850px;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 50px 60px;
+            background: #fffdf7;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Notebook margin line */
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 70px;
+            width: 2px;
+            height: 100%;
+            background: #e7a3a3;
+            opacity: 0.7;
+        }
+
+        .content {
+            margin-left: 25px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        h2 {
+            font-size: 23px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        p {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .definition {
+            text-align: justify;
+        }
+
+        ol {
+            font-size: 21px;
+            padding-left: 35px;
+        }
+
+        li {
+            margin: 12px 0;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                padding: 30px 25px;
+            }
+
+            .page::before {
+                left: 30px;
+            }
+
+            .content {
+                margin-left: 20px;
+            }
+
+            p, ol {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="content">
+
+            <h1><strong>High Level Languages:</strong></h1>
+
+            <p class="definition">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                High-level languages are similar to English. They use English words
+                and mathematical symbols instead of mnemonic codes or binary numbers
+                to write programs. Before a program written in a high-level language
+                can run, each instruction is translated into machine language using
+                a translator called a compiler or an interpreter.
+            </p>
+
+            <h2><strong>Examples of High-Level Languages:</strong></h2>
+
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Some common high-level languages are BASIC, COBOL, C, C++, FORTRAN,
+                LISP, and PASCAL.
+            </p>
+
+            <h2><strong>Advantages of High-Level Languages:</strong></h2>
+
+            <ol>
+                <li>
+                    They are easy to learn and understand.
+                </li>
+
+                <li>
+                    Programs written in high-level languages are portable i.e run on various hardware platforms.
+                </li>
+
+                <li>
+                    Programmers need not know hardware details.
+                </li>
+
+                <li>
+                    Finding and fixing errors (Debugging) is easier.
+                </li>
+
+                <li>
+                    Programs are easier to modify.
+                </li>
+            </ol>
+
+            <h2><strong>Disadvantages of High-Level Languages:</strong></h2>
+
+            <ol>
+                <li>
+                    High-level programs generally run slower.
+                </li>
+
+                <li>
+                    They typically require more memory.
+                </li>
+
+                <li>
+                    High-level programs cannot run directly; they require a compiler
+                    or interpreter to translate into machine code.
+                </li>
+            </ol>
+
+        </div>
+    </div>
+
+</body>
+</html>

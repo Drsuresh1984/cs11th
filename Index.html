@@ -1,0 +1,1558 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Text Book of Computer Science</title>
+
+
+    <style>
+
+        /* ---------- GENERAL ---------- */
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background-color: #eeeeee;
+            color: #222;
+        }
+
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            background: #26384d;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* ---------- LAYOUT ---------- */
+
+        .container {
+            display: flex;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+
+        /* ---------- SIDEBAR ---------- */
+
+        .sidebar {
+            width: 270px;
+            background-color: #d9dee3;
+            min-height: calc(100vh - 120px);
+            padding: 20px;
+            position: sticky;
+            top: 120px;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .unit-link {
+            display: block;
+            text-decoration: none;
+            color: #222;
+            padding: 12px;
+            margin: 5px 0;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+        }
+
+        .unit-link:hover {
+            background-color: #26384d;
+            color: white;
+        }
+
+
+        /* ---------- MAIN BOOK ---------- */
+
+        .book {
+            background-color: white;
+            margin: 25px;
+            padding: 45px;
+            width: 100%;
+            box-shadow: 0 0 12px #bbbbbb;
+        }
+
+
+        /* ---------- COVER ---------- */
+
+        .cover {
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 4px double #333;
+            margin-bottom: 40px;
+        }
+
+        .cover h1 {
+            font-size: 40px;
+            color: #26384d;
+        }
+
+        .cover h2 {
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+
+        /* ---------- UNIT ---------- */
+
+        .unit {
+            margin-top: 50px;
+            scroll-margin-top: 140px;
+        }
+
+        .unit-title {
+            background-color: #26384d;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 6px;
+        }
+
+
+        /* ---------- TOPIC LIST ---------- */
+
+        .topic-list {
+            counter-reset: topic;
+            padding-left: 0;
+        }
+
+        .topic {
+            list-style: none;
+            margin: 10px 0;
+            padding: 14px 18px;
+            background-color: #f5f5f5;
+            border-left: 5px solid #26384d;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .topic:hover {
+            transform: translateX(8px);
+            background-color: #e7edf3;
+        }
+
+        .topic a {
+            text-decoration: none;
+            color: #222;
+            font-size: 17px;
+            display: block;
+        }
+
+        .topic a:hover {
+            color: #0b4f8a;
+        }
+
+
+        /* ---------- NUMBER ---------- */
+
+        .number {
+            display: inline-block;
+            background-color: #26384d;
+            color: white;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* ---------- INFORMATION BOX ---------- */
+
+        .info {
+            background-color: #fff4cc;
+            border-left: 6px solid #d6a500;
+            padding: 20px;
+            margin: 30px 0;
+            align-items:flex-end; 
+            text-align:justify;
+        }
+
+
+        /* ---------- BUTTON ---------- */
+
+        .button {
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: #26384d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        .button:hover {
+            background-color: #142333;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background-color: #26384d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* ---------- TOP BUTTON ---------- */
+
+        .top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #26384d;
+            color: white;
+            text-align: center;
+            line-height: 45px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 800px) {
+
+            .container {
+                display: block;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: relative;
+                top: 0;
+                min-height: auto;
+            }
+
+            .book {
+                margin: 0;
+                padding: 25px;
+            }
+
+            .cover h1 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body id="top">
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <h1>Text Book of Computer Science</h1>
+
+    <p>Higher Secondary Part-I</p>
+
+</header>
+
+
+
+<!-- ================= MAIN CONTAINER ================= -->
+
+<div class="container">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <h2>📚 Contents</h2>
+
+        <a class="unit-link" href="#unit1">
+            Unit 1: Computer Fundamentals
+        </a>
+
+        <a class="unit-link" href="#unit2">
+            Unit 2: Software Concept
+        </a>
+        
+        <a class="unit-link" href="#unit3">
+            Unit 3: Number System
+        </a>
+        
+        <a class="unit-link" href="#unit4">
+            Unit 4: Programming Methodology
+        </a>
+        
+        <a class="unit-link" href="#unit5">
+            Unit 5: Introduction to Python
+        </a>
+        
+        <a class="unit-link" href="#unit6">
+            Unit 6. Data Types and Operators
+        </a>
+        
+        <a class="unit-link" href="#unit7">
+            Unit 7: Strings in Python
+        </a>
+    </aside>
+
+
+
+    <!-- ================= BOOK ================= -->
+
+    <main class="book">
+
+
+        <!-- COVER -->
+
+               <!-- ================= AUTHOR PROFILE ================= -->
+        
+        <section class="profile">
+        
+                  
+            <div class="profile-content">
+                <div class="info">
+                <h2>About the Author</h2>
+        
+                <h3>Dr. Suresh Kumar Sharma BCA,B.Ed,MCA,PhD,NET,SLET</h3>
+        
+                <p>
+                    Dr. Suresh Kumar Sharma is a Lecturer in Computer Science
+                    with more than 8 years of teaching experience. He is
+                    passionate about computer science education, emerging
+                    technologies, programming, artificial intelligence and
+                    innovative digital learning. He has academic qualifications
+                    in Computer Applications and Computer Science and is
+                    actively involved in teaching, research and educational
+                    technology. His approach focuses on making complex
+                    computing concepts simple, practical and student-friendly.
+                    He encourages learners to develop logical thinking,
+                    problem-solving skills and creativity. Through teaching,
+                    research and digital content development, he aims to
+                    contribute to quality computer science education.
+                </p>
+        
+            </div>
+        
+        </section>
+        
+        <!-- INTRODUCTION -->
+
+        <div class="info">
+
+            <h2>📖 About This Textbook</h2>
+
+            <p>
+                This interactive textbook contains the syllabus
+                of Computer Science for HSP-I. Select any topic
+                from the contents to study the corresponding
+                chapter.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= UNIT 1 ================= -->
+
+        <section id="unit1" class="unit">
+
+            <h2 class="unit-title">
+                UNIT 1: Computer Fundamentals
+            </h2>
+
+
+            <ol class="topic-list">
+
+
+                <li class="topic">
+
+                    <a href="hoc.html">
+
+                        <span class="number">1</span>
+
+                        History of Computers
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="generations.html">
+
+                        <span class="number">2</span>
+
+                        Generations of Computers
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="functions.html">
+
+                        <span class="number">3</span>
+
+                        Functions of a Computer
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="block-diagram.html">
+
+                        <span class="number">4</span>
+
+                        Block Diagram of a Computer System
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="functional-components.html">
+
+                        <span class="number">5</span>
+
+                        Brief Description of Functional Components
+                        of a Computer System
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="input-devices.html">
+
+                        <span class="number">6</span>
+
+                        Input Devices: Keyboard, Mouse,
+                        Scanner, Barcode Reader
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="output-devices.html">
+
+                        <span class="number">7</span>
+
+                        Output Devices: Monitor, Printer
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="cpu.html">
+
+                        <span class="number">8</span>
+
+                        CPU: ALU and CU
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="primary-memory.html">
+
+                        <span class="number">9</span>
+
+                        Memory Unit: Primary Memory:
+                        Cache Memory, RAM, ROM
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="prom-eprom-eeprom.html">
+
+                        <span class="number">10</span>
+
+                        Concept of PROM, EPROM, EEPROM
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="secondary-memory.html">
+
+                        <span class="number">11</span>
+
+                        Secondary Memory: Hard Disk Drive,
+                        CD, DVD, Pen Drive
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="memory-units.html">
+
+                        <span class="number">12</span>
+
+                        Units of Memory: Byte, Kilobyte,
+                        Megabyte, Gigabyte, Terabyte, Petabyte
+
+                    </a>
+
+                </li>
+
+
+            </ol>
+
+        </section>
+
+
+
+        <!-- ================= UNIT 2 ================= -->
+
+        <section id="unit2" class="unit">
+
+            <h2 class="unit-title">
+                UNIT 2: Software Concept
+            </h2>
+
+
+            <ol class="topic-list">
+
+
+                <li class="topic">
+
+                    <a href="software-definition.html">
+
+                        <span class="number">1</span>
+
+                        Definition of Software
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="software-types.html">
+
+                        <span class="number">2</span>
+
+                        Types of Software
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="system-software.html">
+
+                        <span class="number">3</span>
+
+                        System Software
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="application-software.html">
+
+                        <span class="number">4</span>
+
+                        Application Software
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="utility-software.html">
+
+                        <span class="number">5</span>
+
+                        Utility Software
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="operating-system.html">
+
+                        <span class="number">6</span>
+
+                        Need for Operating System
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="os-functions.html">
+
+                        <span class="number">7</span>
+
+                        Functions of Operating System
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="processor-management.html">
+
+                        <span class="number">8</span>
+
+                        Processor Management
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="memory-management.html">
+
+                        <span class="number">9</span>
+
+                        Memory Management
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="file-management.html">
+
+                        <span class="number">10</span>
+
+                        File Management
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="device-management.html">
+
+                        <span class="number">11</span>
+
+                        Device Management
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="computer-language.html">
+
+                        <span class="number">12</span>
+
+                        Concept of Computer Language
+
+                    </a>
+
+                </li>
+
+              <li class="topic">
+
+                    <a href="assembly-language.html">
+
+                        <span class="number">13</span>
+
+                        Assembly Language
+
+                    </a>
+
+                </li>
+                <li class="topic">
+
+                    <a href="assembly-language.html">
+
+                        <span class="number">14</span>
+
+                        Assembly Language
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="high-level-language.html">
+
+                        <span class="number">15</span>
+
+                        High Level Languages
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="language-processors.html">
+
+                        <span class="number">16</span>
+
+                        Language Processors
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="assembler.html">
+
+                        <span class="number">17</span>
+
+                        Assembler
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="compiler.html">
+
+                        <span class="number">18</span>
+
+                        Compiler
+
+                    </a>
+
+                </li>
+
+
+                <li class="topic">
+
+                    <a href="interpreter.html">
+
+                        <span class="number">19</span>
+
+                        Interpreter
+
+                    </a>
+
+                </li>
+             <li class="topic">
+
+                    <a href="differenceci.html">
+
+                        <span class="number">20</span>
+
+                        Difference between Compiler and Interpreter
+
+                    </a>
+
+                </li>
+
+
+            </ol>
+
+        </section>
+
+ <!-- ================= UNIT 3 ================= -->
+
+ <section id="unit3" class="unit">
+
+    <h2 class="unit-title">
+        UNIT 3: Number System
+    </h2>
+
+
+    <ol class="topic-list">
+
+
+        <li class="topic">
+
+            <a href="ns.html">
+
+                <span class="number">1</span>
+
+                Number Systems: Decimal, Binary, Octal, Hexadecimal
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="dtb.html">
+
+                <span class="number">2</span>
+
+                Conversion from Decimal number system to Binary
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="dto.html">
+
+                <span class="number">3</span>
+
+                Conversion from Decimal number system to octal
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="dth.html">
+
+                <span class="number">4</span>
+
+                Conversion from Decimal number system to octal
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="btd.html">
+
+                <span class="number">5</span>
+
+                Conversion from Binary to Decimal
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="otd.html">
+
+                <span class="number">6</span>
+
+                Conversion from Octal to Decimal
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="htd.html">
+
+                <span class="number">7</span>
+
+                Conversion from Hexadecimal number system to Decimal
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="bto.html">
+
+                <span class="number">8</span>
+
+                Conversion from Binary number system to Octal using shortcut method (whole numbers only) 
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="bthd.html">
+
+                <span class="number">9</span>
+
+                Conversion from Binary number system to  Hexadecimal number system using shortcut method (whole numbers only) 
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="otb.html">
+
+                <span class="number">10</span>
+
+                Conversion from Octal number system to Binary number system using shortcut method (whole numbers only)
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="htb.html">
+
+                <span class="number">11</span>
+
+                Conversion from Hexadecimal number system to Binary number system using shortcut method (whole numbers only)
+
+
+            </a>
+
+        </li>
+
+    </ol>
+
+</section>
+
+<!-- ================= UNIT 4 ================= -->
+
+
+<section id="unit4" class="unit">
+
+    <h2 class="unit-title">
+        UNIT 4: Programming Methodology
+    </h2>
+
+
+    <ol class="topic-list">
+
+
+        <li class="topic">
+
+            <a href="pc.html">
+
+                <span class="number">1</span>
+
+                Concept of a Program
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="cgp.html">
+
+                <span class="number">2</span>
+
+                Characteristics of a good program
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="cma.html">
+
+                <span class="number">3</span>
+
+                Concept of Modular approach
+
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="pd.html">
+
+                <span class="number">4</span>
+
+                Program Documentation (Internal & External documentation)
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="pm.html">
+
+                <span class="number">5</span>
+
+                Program Maintenance
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="dp.html">
+
+                <span class="number">6</span>
+
+                Debugging a program
+                
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="error.html">
+
+                <span class="number">7</span>
+
+                Error and types of errors (Syntax error, Logical error, Runtime errors
+            </a>
+
+        </li>
+    </ol>
+
+</section>
+
+        
+
+<!-- ================= UNIT 5 ================= -->
+
+<section id="unit5" class="unit">
+
+    <h2 class="unit-title">
+        UNIT 5: Introduction to Python
+    </h2>
+
+
+    <ol class="topic-list">
+
+
+        <li class="topic">
+
+            <a href="op.html">
+
+                <span class="number">1</span>
+
+                Origin of python
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="uf.html">
+
+                <span class="number">2</span>
+
+                Unique Features of python
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="pcs.html">
+
+                <span class="number">3</span>
+
+                Python character set
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="token.html">
+
+                <span class="number">4</span>
+
+                Tokens (Keywords, Identifiers, Literals, Operators, Punctuators)
+
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="pi.html">
+
+                <span class="number">5</span>
+
+                The print and input statement
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="comments.html">
+
+                <span class="number">6</span>
+
+                comments in python
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="variable.html">
+
+                <span class="number">7</span>
+                Concept of variables
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="rules.html">
+                <span class="number">8</span>
+                Rules for naming a variable
+            </a>
+        </li>
+    </ol>
+
+</section>
+
+
+<!-- ================= UNIT 6 ================= -->
+
+<section id="unit6" class="unit">
+
+    <h2 class="unit-title">
+        UNIT 6: Data Types and Operators
+    </h2>
+
+
+    <ol class="topic-list">
+
+
+        <li class="topic">
+
+            <a href="bidt.html">
+
+                <span class="number">1</span>
+                Built-in data types in Python
+                Text type: str
+                Numeric type: int, float
+                Sequence type: list
+                Boolean Type: bool
+                
+                
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="type.html">
+
+                <span class="number">2</span>
+
+                Displaying the data type (use of type)
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="tc.html">
+
+                <span class="number">3</span>
+
+                Type Conversion (from int to float and float to int)
+                
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="operator.html">
+
+                <span class="number">4</span>
+
+                Operators
+               
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="Arithmetic.html">
+
+                <span class="number">5</span>
+
+                Arithmetic operators (+, -, *, /, %, **)
+                
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="Comparison.html">
+
+                <span class="number">6</span>
+
+                Comparison operators (==,!= ,>,>=,<,<=)
+               
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="Logical .html">
+
+                <span class="number">7</span>
+
+                Logical operators (and, or, not)
+                
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="Assignment.html">
+
+                <span class="number">8</span>
+
+                Assignment operators (=,+=,-=,*=,/=,%=,**=)
+                
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href=" Identity.html">
+
+                <span class="number">9</span>
+
+                Identity operator (is, is not)
+               
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="member.html">
+
+                <span class="number">10</span>
+
+                Membership operator (in, not in)
+                
+            </a>
+
+        </li>
+
+
+    </ol>
+<!-- ================= UNIT 7 ================= -->
+
+<section id="unit7" class="unit">
+
+    <h2 class="unit-title">
+        UNIT 7: Strings in Python
+    </h2>
+
+
+    <ol class="topic-list">
+
+
+        <li class="topic">
+
+            <a href="ds.html">
+
+                <span class="number">1</span>
+
+                Defining String
+
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="stv.html">
+
+                <span class="number">2</span>
+
+                Assigning string to a variable
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="ms.html">
+
+                <span class="number">3</span>
+
+                Multiline strings
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="func.html">
+
+                <span class="number">4</span>
+
+                Use of len (), upper(), lower(),replace(),in, not in
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="slice.html">
+
+                <span class="number">5</span>
+
+                Slicing
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="sfs.html">
+
+                <span class="number">6</span>
+
+                Slice from the start
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="ste.html">
+
+                <span class="number">7</span>
+
+                Slice to the end
+
+
+            </a>
+
+        </li>
+
+
+        <li class="topic">
+
+            <a href="escape.html">
+
+                <span class="number">8</span>
+
+                Use of escape characters in the string (\ \ \n,\t)
+
+            </a>
+
+        </li>
+
+
+    </ol>
+</section>
+<!-- ================= STUDY NOTE ================= -->
+
+<div class="info">
+
+    <h2>💡 Study Tip</h2>
+
+    <p>
+        Click on any topic to open its detailed chapter.
+        Each chapter can contain definitions, explanations,
+        diagrams, examples, activities, MCQs and review
+        questions.
+    </p>
+
+</div>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <div style="text-align:center; margin-top:40px;">
+
+            <a href="#top" class="button">
+                ↑ Back to Top
+            </a>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        Text Book of Computer Science — HSP-I
+    </p>
+
+    <p>
+        Interactive Digital Textbook
+    </p>
+
+</footer>
+
+
+
+<a href="#top" class="top">↑</a>
+
+
+</body>
+
+</html>
+```

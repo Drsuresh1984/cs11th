@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need for Operating System - Computer Science Notes</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f1e8;
+            font-family: "Comic Sans MS", "Segoe Print", cursive;
+            color: #222;
+        }
+
+        .page {
+            width: 850px;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 50px 60px;
+            background: #fffdf7;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Notebook margin line */
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 70px;
+            width: 2px;
+            height: 100%;
+            background: #e7a3a3;
+            opacity: 0.7;
+        }
+
+        .content {
+            margin-left: 25px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        p {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .definition {
+            text-align: justify;
+        }
+
+        .section-title {
+            font-size: 23px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        ol {
+            font-size: 21px;
+            padding-left: 35px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        /* Operating System image */
+        .os-image {
+            float: left;
+            width: 550px;
+            height: 500px;
+            margin: 5px 20px 10px 0;
+            border: 2px solid #555;
+            object-fit: cover;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                padding: 30px 25px;
+            }
+
+            .page::before {
+                left: 30px;
+            }
+
+            .content {
+                margin-left: 20px;
+            }
+
+            p, ol {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 23px;
+            }
+
+            .os-image {
+                width: 120px;
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="content">
+
+            <h1><strong>Need For Operating System</strong></h1>
+
+            <h2><strong>Operating System:</strong></h2>
+
+            <img
+                src="operating-system.jpg"
+                alt="Operating System"
+                class="os-image"
+            >
+
+            <p class="definition">
+                An <strong>Operating System</strong> is a type of system
+                software that acts as an interface between the end user and
+                the computer hardware. Every computer must have at least one
+                Operating System to run other programs. It handles essential
+                tasks such as file management, memory management, process
+                management, input/output operations, and controlling
+                peripheral devices.
+            </p>
+
+            <div class="clear"></div>
+
+            <p>
+                <strong>Examples</strong> of popular Operating Systems
+                include Linux, Windows, and Android (for mobile devices).
+            </p>
+
+            <p class="section-title">
+                <strong>Need for Operating System:</strong>
+            </p>
+
+            <p class="definition">
+                The main purpose of a computer system is to run user programs
+                and make tasks easier. The following points explain why an
+                Operating System is needed:
+            </p>
+
+            <ol>
+                <li>
+                    It makes it easy for humans to interact with the computer.
+                </li>
+
+                <li>
+                    It helps start the computer automatically when the power
+                    is switched on.
+                </li>
+
+                <li>
+                    It loads and schedules user programs to run.
+                </li>
+
+                <li>
+                    It controls input and output devices.
+                </li>
+
+                <li>
+                    It manages the execution of programs.
+                </li>
+
+                <li>
+                    It controls the use of the main memory.
+                </li>
+            </ol>
+
+        </div>
+    </div>
+
+</body>
+</html>
+

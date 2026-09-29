@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler vs Interpreter - Computer Science Notes</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f1e8;
+            font-family: "Comic Sans MS", "Segoe Print";
+            color: #222;
+        }
+
+        .page {
+            width: 850px;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 50px 60px;
+            background: #fffdf7;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Notebook margin line */
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 70px;
+            width: 2px;
+            height: 100%;
+            background: #e7a3a3;
+            opacity: 0.7;
+        }
+
+        .content {
+            margin-left: 25px;
+            overflow-x: auto;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 19px;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1.5px solid #555;
+            padding: 12px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        td:first-child,
+        th:first-child {
+            text-align: center;
+            width: 70px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                padding: 30px 25px;
+            }
+
+            .page::before {
+                left: 30px;
+            }
+
+            .content {
+                margin-left: 20px;
+            }
+
+            table {
+                font-size: 16px;
+            }
+
+            th, td {
+                padding: 9px 7px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="content">
+
+            <h1><strong>Compiler vs Interpreter</strong></h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th><strong>S.NO.</strong></th>
+                        <th><strong>Compiler</strong></th>
+                        <th><strong>Interpreter</strong></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><strong>1</strong></td>
+                        <td>Takes the entire program as input.</td>
+                        <td>Take one instruction at a time.</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2</strong></td>
+                        <td>Translate the whole code at once.</td>
+                        <td>Translates and executes line by line.</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3</strong></td>
+                        <td>Generates intermediate object code.</td>
+                        <td>Does not generate object code.</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>4</strong></td>
+                        <td>Uses more memory.</td>
+                        <td>Uses less memory.</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>5</strong></td>
+                        <td>Shows errors after compiling the entire program.</td>
+                        <td>Shows errors immediately when they occur.</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>6</strong></td>
+                        <td>Not needed during execution.</td>
+                        <td>Must be present during execution.</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>7</strong></td>
+                        <td>
+                            Debugging can be harder due to delayed error reporting.
+                        </td>
+                        <td>
+                            Easier debugging as errors are shown instantly.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>8.</strong></td>
+                        <td>
+                            <strong>Examples:</strong> C, C++, FORTRAN, Pascal, COBOL
+                        </td>
+                        <td>
+                            <strong>Examples :</strong> Python, BASIC, Ruby, JavaScript
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</body>
+</html>

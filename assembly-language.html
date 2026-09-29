@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assembly Language - Computer Science Notes</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f1e8;
+            font-family: "Comic Sans MS", "Segoe Print";
+            color: #222;
+        }
+
+        .page {
+            width: 850px;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 50px 60px;
+            background: #fffdf7;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Notebook margin line */
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 70px;
+            width: 2px;
+            height: 100%;
+            background: #e7a3a3;
+            opacity: 0.7;
+        }
+
+        .content {
+            margin-left: 25px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        h2 {
+            font-size: 23px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        p {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .definition {
+            text-align: justify;
+        }
+
+        ol {
+            font-size: 21px;
+            padding-left: 35px;
+        }
+
+        li {
+            margin: 12px 0;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                padding: 30px 25px;
+            }
+
+            .page::before {
+                left: 30px;
+            }
+
+            .content {
+                margin-left: 20px;
+            }
+
+            p, ol {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="content">
+
+            <h1><strong>Assembly Language</strong></h1>
+
+            <p class="definition">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                To make programming easier and reduce the difficulties of machine language,
+                assembly language was developed. It is easier to read, write, and understand
+                compared to machine language. Although it is still a low-level language, it
+                uses mnemonic codes (short words) instead of binary numbers. For example,
+                ADD means addition, DIV means division, and CMP means compare. Programs
+                written in assembly language need a special translator called an assembler
+                to convert them into machine language.
+            </p>
+
+            <h2><strong>Advantages of Assembly Language:</strong></h2>
+
+            <ol>
+                <li>
+                    It is easier to undehrstand and use than machine language.
+                </li>
+
+                <li>
+                    Errors are easier to find and fix.
+                </li>
+
+                <li>
+                    Program instructions are simpler to modify.
+                </li>
+
+                <li>
+                    Programs written in assembly language use less memory and run faster.
+                </li>
+
+                <li>
+                    The programmer doesn&apos;t need to memorize many complex codes.
+                </li>
+            </ol>
+
+            <h2><strong>Disadvantages of Assembly Language:</strong></h2>
+
+            <ol>
+                <li>
+                    We&nbsp; need to know the computer&apos;s processor architecture and
+                    instruction set to program in assembly language.
+                </li>
+
+                <li>
+                    Programs written in assembly language are not portable.
+                </li>
+            </ol>
+
+        </div>
+    </div>
+
+</body>
+</html>

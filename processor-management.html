@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processor Management - Computer Science Notes</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f1e8;
+            font-family: "Comic Sans MS", "Segoe Print";
+            color: #222;
+        }
+
+        .page {
+            width: 850px;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 50px 60px;
+            background: #fffdf7;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Notebook margin line */
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 70px;
+            width: 2px;
+            height: 100%;
+            background: #e7a3a3;
+            opacity: 0.7;
+        }
+
+        .content {
+            margin-left: 25px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        p {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .definition {
+            text-align: justify;
+        }
+
+        ol {
+            font-size: 21px;
+            padding-left: 35px;
+        }
+
+        li {
+            margin: 12px 0;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                padding: 30px 25px;
+            }
+
+            .page::before {
+                left: 30px;
+            }
+
+            .content {
+                margin-left: 20px;
+            }
+
+            p, ol {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="content">
+
+            <h1><strong>Processor Management:</strong></h1>
+
+            <p class="definition">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                A process is a set of instructions that need to be executed.
+                Process management involves tasks such as creating processes,
+                scheduling them for execution, handling deadlocks, and terminating
+                processes when they finish. It is the Operating System&apos;s responsibility
+                to manage all the processes running on the system. In a multiprogramming
+                environment, where multiple processes run at the same time, the OS decides
+                which process will use the processor (CPU), when it will run, and for how
+                long. This is called <strong>process scheduling</strong>.
+            </p>
+
+            <p>
+                For processor management, the Operating System performs the following tasks:
+            </p>
+
+            <ol>
+                <li>
+                    Keeps track of the processor and the status of each process.
+                </li>
+
+                <li>
+                    Allocates the processor to a process when it needs to run.
+                </li>
+
+                <li>
+                    Deallocates the processor when a process finishes or no longer requires it.
+                </li>
+            </ol>
+
+        </div>
+    </div>
+
+</body>
+</html>
